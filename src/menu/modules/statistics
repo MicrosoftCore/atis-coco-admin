@@ -1,0 +1,28 @@
+// [统计] 菜单
+import component from '@/pages/statistics'
+
+export default {
+  path: '/statistics',
+  name: 'statistics',
+  component,
+  redirect: { name: 'statistics-index' },
+  meta: {
+    title: '统计',
+    icon: '统计'
+  },
+  children: [
+    { path: 'index', name: 'statistics-index', component: () => import('@/pages/demo/business/index/index.vue') },
+    {
+      path: 'member',
+      name: 'statistics-member',
+      component,
+      redirect: { name: 'statistics-member-index' },
+      meta: {
+        title: '会员分析'
+      },
+      children: [
+        { path: 'index', name: 'statistics-member-index', component: () => import('@/pages/statistics/member') }
+      ]
+    }
+  ]
+}

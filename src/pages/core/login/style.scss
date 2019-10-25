@@ -1,0 +1,241 @@
+@import '~@/assets/style/public.scss';
+.login-page {
+  // background-color: #010602;
+  background-image: url('https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/01/0F/ChMkJ1bKwyeICTEhAAfXE3c6te0AALGygNu1_kAB9cr070.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  // 层
+  .layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    &.flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  // 背景
+  .bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    canvas {
+      display: block;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  // logo
+  .logo-group {
+    margin-top: -75px - 70px;
+    margin-bottom: 30px;
+    position: relative;
+    img {
+      height: 60px;
+    }
+  }
+
+  .el-tabs__header {
+    margin-bottom: 0;
+    border-bottom: none !important;
+    .el-tabs__item {
+      background-color: #ffffff;
+      border-bottom: none;
+      &:not(.is-active) {
+        border-bottom: 1px solid #e4e7ed;
+      }
+    }
+  }
+
+  // 登陆表单
+  .form-group {
+    width: 300px;
+    // 重新设置卡片阴影
+    .el-card {
+      // box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
+      border-top-left-radius: 0;
+      .el-card__body {
+        // padding-top: 70px;
+      }
+    }
+    .expert-login__tips {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #333333;
+    }
+    .svg-group {
+      height: 40px;
+    }
+    .svg-1 {
+      position: absolute;
+      top: 16px;
+      right: 50px;
+      .poptip {
+        width: 143px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid #f3d995;
+        background: #fefcee;
+        font-size: 12px;
+        color: #df9c1f;
+        .poptip-arrow {
+          position: absolute;
+          right: 0;
+          top: 8px;
+          em {
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 1px;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: #f3d995;
+            border-width: 6px 0 6px 6px;
+            overflow: hidden;
+          }
+          span {
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: #fefcee;
+            border-width: 6px 0 6px 6px;
+            overflow: hidden;
+          }
+        }
+      }
+      svg {
+        width: 13px;
+        height: 13px;
+        margin-right: 8px;
+      }
+    }
+    .svg-2 {
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      top: 10px;
+      right: 0;
+    }
+    .qrCode {
+      color: #333333;
+      .pass-form-logo {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .tang-pass-qrcode-title {
+        margin: 12px 0 30px;
+        font-size: 14px;
+        text-align: center;
+      }
+      .tang-pass-qrcode-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 95px;
+        overflow: hidden;
+        .tang-pass-qrcode-init {
+          width: 158px;
+          height: 158px;
+          padding: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ecedee;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .tang-pass-footerBar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: #f3f8ff;
+        font-size: 14px;
+      }
+      a {
+        color: #3582f8;
+        &:hover {
+          opacity: .5;
+        }
+      }
+      .fa {
+        font-size: 16px;
+        margin: 0 2px;
+      }
+    }
+
+    .userQrcode {
+      height: 20px;
+      line-height: 20px;
+      user-select:none;
+      text-align: right;
+      font-size: 14px;
+      a {
+        color: #3582f8;
+      }
+    }
+    // 登陆按钮
+    .button-login {
+      width: 100%;
+      border-radius: 2px;
+    }
+    // 输入框左边的图表区域缩窄
+    .el-input-group__prepend {
+      padding: 0px 14px;
+    }
+    .el-input-group__append {
+      color: #67c23a;
+      text-align: center;
+      cursor: pointer;
+      background-color: unset;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+    .el-input-group__prepend {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+    .el-input__inner {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+    .el-input-group--append .el-input__inner {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .login-code {
+      height: 40px - 2px;
+      display: block;
+      margin: 0px -20px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+  // 帮助按钮
+  .button-help {
+    width: 300px;
+    margin-top: $margin;
+  }
+}

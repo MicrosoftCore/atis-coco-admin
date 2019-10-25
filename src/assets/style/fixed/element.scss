@@ -1,0 +1,38 @@
+// element 样式补丁
+
+.el-submenu__title {
+  .el-submenu__icon {
+    width: 24px;
+    height: 18px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.el-menu--inline {
+  .el-menu-item,
+  .el-submenu__title {
+    .el-submenu__icon {
+      margin-left: 5px;
+      margin-right: -5px;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+.el-badge__content {
+  background-color: #f04134 !important;
+}
+
+.el-message {
+  border-color: transparent;
+  &.el-message--warning {
+    background-color: #eaa000;
+    & * {
+      color: #ffffff !important;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+// [设置] 菜单
+import component from '@/pages/setting'
+
+export default {
+  path: '/setting',
+  name: 'setting',
+  component,
+  redirect: { name: 'setting-index' },
+  meta: {
+    title: '设置',
+    icon: '设置'
+  },
+  children: [
+    { path: 'index', name: 'setting-index', component: () => import('@/pages/demo/business/index/index.vue') },
+    {
+      path: 'account',
+      name: 'setting-account',
+      component,
+      redirect: { name: 'setting-account-index' },
+      meta: {
+        title: '账户设置',
+      },
+      children: [
+        { path: 'index', name: 'setting-account-index', component: () => import('@/pages/setting/account') }
+      ]
+    },
+    {
+      path: 'violate',
+      name: 'setting-violate',
+      component,
+      redirect: { name: 'setting-violate-index' },
+      meta: {
+        title: '违规记录'
+      },
+      children: [
+        { path: 'index', name: 'setting-violate-index', component: () => import('@/pages/setting/violate') }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+.public-push__style {
+  width: 100%;
+  min-height: 248px;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  section {
+    width: 130px;
+    height: 130px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: #F6F8F9;
+    }
+    div {
+      color: #8d8d8d;
+      text-align: center;
+      i {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+      span {
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+  .el-row {
+    width: 100%;
+  }
+}

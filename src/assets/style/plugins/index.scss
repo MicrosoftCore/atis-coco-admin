@@ -1,0 +1,14 @@
+@import 'viewerjs/dist/viewer.css';
+.viewer-title {
+  font-size: 14px;
+  line-height: 2;
+}
+.viewer-toolbar {
+  ul {
+    transform: scale(1.5, 1.5);
+    margin: 10px auto 15px;
+    li {
+      margin-right: 3px;
+    }
+  }
+}
